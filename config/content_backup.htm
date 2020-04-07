@@ -20,8 +20,70 @@
 <p>3.安裝時將pip選項取消勾選</p>
 <p>4.將資料取代就資料夾</p>
 <p>5.將啟動當內舊的路徑改成新的p382</p>
-<p>6.安裝pip工具及完成</p><h1>直播討論紀錄</h1>
+<p>6.安裝pip工具及完成</p>
+<h1>直播討論紀錄</h1>
 <h2>W2工作分配</h2>
 <p><br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JXUKf0cfJcc" width="560"></iframe></p>
 <h2>W3小組討論工作方向</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/QTfPD5bpeKc" width="560"></iframe></p>
+<h2>W5討論</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ElNea4b1dX8" width="560"></iframe></p>
+<p>討論內容</p>
+<p>Webots toutorials 工作分配</p>
+<p>未來作業討論</p>
+<h1>亂數分組</h1>
+<p><span>要使用到隨機亂數抽取的功能就要使用到random套件</span></p>
+<p><span>在已知的數字清單中亂數抽取一個數字</span></p>
+<p><span>import random</span></p>
+<p><span>x=random.choice([1,3,5,7,9])</span></p>
+<p><span>print(x)</span></p>
+<p><span>&gt;&gt;1</span></p>
+<p><span>在已知的數字清單中亂數抽取兩個數字當作樣本</span></p>
+<p><span>import random</span></p>
+<p><span>y=random.sample([1,3,5,7,9],2)</span></p>
+<p><span>print(y)</span></p>
+<p><span>&gt;&gt;[9,1]</span></p>
+<p><span>將一組清單內的數字順序隨機調換</span></p>
+<p><span>import random</span></p>
+<p><span>data=[1,3,5,7,9]</span></p>
+<p><span>z=random.shuffle(data)</span></p>
+<p><span>print(data)</span></p>
+<p><span>&gt;&gt;[3,7,1,5,9]</span></p>
+<p><span>隨機取得介於0~1之前的數字</span></p>
+<p><span>import random</span></p>
+<p><span>t=random.random()</span></p>
+<p><span>print(t)</span></p>
+<p><span>&gt;&gt;0.8883405366359395</span></p>
+<p><span>隨機取得介於指定數字間的非整數數字</span></p>
+<p><span>import random</span></p>
+<p><span>c=random.uniform(0.0,20.0)</span></p>
+<p><span>print(c)</span></p>
+<p><span>&gt;&gt;16.102</span></p>
+<p><span>常態分配亂數，random.normalvariate(平均值,標準差)</span></p>
+<p><span>import random</span></p>
+<p><span>v=random.normalvariate(100,10)</span></p>
+<p><span>print(v)</span></p>
+<p><span>&gt;&gt;114.04193052665073</span></p><h1>Webots翻譯及心得</h1>
+<h2>傳感器</h2>
+<p></p>
+<h3>相機傳感器</h3>
+<p>對於大多數應用程序而言，添加通用的Camera節點就足夠了。 通用相機是可自定義的（分辨率，視野，噪點等），默認情況下包括變焦和聚焦機制。 提供特殊效果，例如運動模糊，各種噪聲模型，鏡頭畸變和使用球形投影。除了添加通用的Camera節點外，Webot中還提供了一些預定義的Camera模型。</p>
+<p><strong>智能相機</strong></p>
+<p>如果將“識別”節點添加到相機，則相機不僅可以返回圖像，而且還可以返回相機圖像中檢測到的所有對象及其大小和位置。 因此，模擬像是Mobileye之類的智能相機非常容易。</p>
+<p><img alt="smart_camera.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/smart_camera.png"/></p>
+<p><strong>MultiSense S21</strong></p>
+<p>MultiSense S21是基於立體相機的距離傳感器。我們的傳感器模型包括多個Webots設備。內部的IntertialUnit設備用於獲取設備的側傾角，俯仰角和偏航角。 可以使用Webots相機獨立檢索立體相機的左右RGB圖像。 或者，可以在MultiSense S21設備的中央啟用RGB相機和RangeFinder設備。 存在這兩個“元”設備以模仿由真實設備生成的3D彩色點的雲。</p>
+<p>可以使用下表從MultiSenseS21.name字段計算用於從控制器檢索設備的內部設備名稱：</p>
+<p><img alt="" height="529" src="/images/1586269302004.jpg" width="398"/></p>
+<p><img alt="multisense_s21.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/multisense_s21.thumbnail.png"/></p>
+<p><img alt="" height="365" src="/images/1586269413764.jpg" width="477"/></p>
+<p>名稱字段定義MultiSenseS21名稱，並用於計算內部設備名稱（請參閱此表）。</p>
+<p>cameraWidth和cameraHeight字段指定所有內部渲染設備（即Cameras和RangeFinder）的分辨率。</p>
+<p>cameraFieldOfView字段指定所有內部渲染設備的水平視場。</p>
+<p>cameraNoise字段指定所有內部渲染設備的噪聲（請參閱Camera.noise）。</p>
+<p>rangeFinderNoise字段指定內部元RangeFinder的噪聲（請參閱RangeFinder.noise）。</p>
+<p>rangeFinderMaxRange字段指定內部元RangeFinder的最大範圍（請參閱RangeFinder.maxRange）。</p>
+<p>leftCamera，rightCamera，metaCamera和metaRangeFinder字段允許啟用相應的內部渲染設備。</p>
+<p>enablePhysics字段指定傳感器是否應該受到物理影響（質量= 1.5 [kg]）。</p>
+<p></p>
+<p><span></span></p>
