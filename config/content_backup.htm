@@ -86,4 +86,46 @@
 <p>leftCamera，rightCamera，metaCamera和metaRangeFinder字段允許啟用相應的內部渲染設備。</p>
 <p>enablePhysics字段指定傳感器是否應該受到物理影響（質量= 1.5 [kg]）。</p>
 <p></p>
-<p><span></span></p>
+<h3>距離傳感器</h3>
+<p>對於大多數應用程序而言，添加通用的DistanceSensor節點就足夠了，因為它們是可自定義的（分辨率，lookupTable，光圈等）。此外，Webot中提供了一些預定義的商業化模型，例如某些紅外傳感器。</p>
+<p><strong>Sharp GP2D120</strong></p>
+<p><img alt="sharp_GP2D120.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2D120.png"/></p>
+<p>Sharp GP2D120是一款具有集成信號處理和模擬電壓輸出的測距傳感器。 該設備輸出與檢測距離相對應的電壓。該型號具有以下規格：</p>
+<p>有效範圍：<span>4 to 30 [cm]</span></p>
+<p>輸出類型：類比</p>
+<p>響應時間：39 [ms]</p>
+<p>啟動延遲：44 [ms]</p>
+<p>平均消耗：33 [mA]</p>
+<p>原型SharpGP2D120 {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2D120”<br/>   SFString模型“ GP2D120”</p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。</p>
+<p>wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span> </span><code>y(x) = 0.5131*x^(-0.5735)-0.6143</code></li>
+<li>Convert voltage to meters:<span> </span><code>y(x) = 0.1594*x^(-0.8533)-0.02916</code></li>
+</ul>
+<p><strong>Sharp GP2Y0A02YK0F</strong></p>
+<p><strong><img alt="sharp_GP2Y0A02YK0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A02YK0F.png"/></strong></p>
+<p>Sharp GP2Y0A02YK0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
+<p>該型號具有以下規格：</p>
+<p>有效範圍：20至150 [cm]</p>
+<p>輸出類型：類比</p>
+<p>響應時間：33 [ms]</p>
+<p>啟動延遲：50 [ms]</p>
+<p>平均消耗：33 [mA]</p>
+<p>原型SharpGP2Y0A02YK0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A02YK0F”</p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span> </span><code>y(x) = 1.784*x^(-0.4215)-1.11</code></li>
+<li>Convert voltage to meters:<span> </span><code>y(x) = 0.7611*x^(-0.9313)-0.1252</code></li>
+</ul>
+<p><strong>Sharp GP2Y0A41SK0F</strong></p>
+<p><strong><img alt="sharp_GP2Y0A41SK0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A41SK0F.png"/></strong></p>
+<p>Sharp GP2Y0A41SK0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
+<p>該型號具有以下規格：</p>
+<p>有效範圍：4到30 [cm]<br/>輸出類型：類比<br/>響應時間：16.5 [ms]<br/>啟動延遲：26 [ms]<br/>平均消耗：12 [mA]</p>
+<p><span>原型SharpGP2Y0A41SK0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A41SK0F”<br/></span></p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span> </span><code>y(x) = 0.5131*x^(-0.5735)-0.6143</code></li>
+<li>Convert voltage to meters:<span> </span><code>y(x) = 0.1594*x^(-0.8533)-0.02916</code><code></code></li>
+</ul>
