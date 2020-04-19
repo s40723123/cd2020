@@ -31,7 +31,15 @@
 <p>討論內容</p>
 <p>Webots toutorials 工作分配</p>
 <p>未來作業討論</p>
-<h1>亂數分組</h1>
+<h2>W6</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/B6jt5OAf424" width="560"></iframe></p>
+<p><strong>開會內容</strong></p>
+<p>說明OBS安裝及使用</p>
+<p>說明Webots工作方向</p>
+<h2>W7線上課程操作說明</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/96y-KSUWDyE" width="560"></iframe></p>
+<p><strong>討論內容</strong></p>
+<p>說明線上課程操作流程</p><h1>亂數分組</h1>
 <p><span>要使用到隨機亂數抽取的功能就要使用到random套件</span></p>
 <p><span>在已知的數字清單中亂數抽取一個數字</span></p>
 <p><span>import random</span></p>
@@ -128,4 +136,15 @@
 <ul>
 <li>Convert meters to voltage:<span> </span><code>y(x) = 0.5131*x^(-0.5735)-0.6143</code></li>
 <li>Convert voltage to meters:<span> </span><code>y(x) = 0.1594*x^(-0.8533)-0.02916</code><code></code></li>
+</ul>
+<p><strong>Sharp GP2Y0A710K0F</strong></p>
+<p><strong><img alt="sharp_GP2Y0A710K0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A710K0F.thumbnail.png"/></strong></p>
+<p>Sharp GP2Y0A710K0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
+<p>該型號具有以下規格：</p>
+<p>有效範圍：100至550 [cm]<br/>輸出類型：類比<br/>響應時間：21 [ms]<br/>啟動延遲：26 [ms]<br/>平均消耗：30 [mA]</p>
+<p>原型SharpGP2Y0A710K0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A710K0F”</p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span> </span><code>y(x) = 1.962*x^(-0.5214)+0.4926</code></li>
+<li>Convert voltage to meters:<span> </span><code>y(x) = 20.24*x^(-4.76)+0.6632</code></li>
 </ul>
