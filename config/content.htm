@@ -9,11 +9,20 @@
 <p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
 <p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>Python更新</h1>
+<h1>OBS串流使用方法及問題</h1>
+<p></p>
+<p><a href="https://github.com/mdecourse/cmsimde"></a><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BlCLr1_Rto0" width="560"></iframe></p>
+<p><strong>使用方法:</strong></p>
+<p><b>1.</b>先到OBS官網下載最新版本並安裝<a href="https://obsproject.com/download">https://obsproject.com/download</a></p>
+<p>2.找到資源案+號擷取螢幕和擷取視訊鏡頭</p>
+<p>3.開啟設定選擇串流平台YOUTUBE</p>
+<p>4.案取得金鑰，並從網路上複製下來貼上</p>
+<p>5.案開啟串流</p>
+<p><strong>無法擷取螢幕黑畫面解決方法:</strong></p>
+<p><strong>1.</strong>WINDOWS設定，選擇顯示器拉到底</p>
+<p>2.選擇圖形設定</p>
+<p>3.瀏覽並找到OBS主程式</p>
+<p>4.設定成省點模式</p><h1>Python更新</h1>
 <p>驗證影片<br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JPD6v553Fso" width="560"></iframe></p>
 <p>1.先下載python3.8.2版</p>
 <p>2.安裝時先創建資料p382夾並選擇該資料夾</p>
