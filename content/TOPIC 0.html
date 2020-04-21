@@ -1,166 +1,160 @@
-<h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>OBS串流使用方法及問題</h1>
-<p></p>
-<p><a href="https://github.com/mdecourse/cmsimde"></a><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BlCLr1_Rto0" width="560"></iframe></p>
-<p><strong>使用方法:</strong></p>
-<p><b>1.</b>先到OBS官網下載最新版本並安裝<a href="https://obsproject.com/download">https://obsproject.com/download</a></p>
-<p>2.找到資源案+號擷取螢幕和擷取視訊鏡頭</p>
-<p>3.開啟設定選擇串流平台YOUTUBE</p>
-<p>4.案取得金鑰，並從網路上複製下來貼上</p>
-<p>5.案開啟串流</p>
-<p><strong>無法擷取螢幕黑畫面解決方法:</strong></p>
-<p><strong>1.</strong>WINDOWS設定，選擇顯示器拉到底</p>
-<p>2.選擇圖形設定</p>
-<p>3.瀏覽並找到OBS主程式</p>
-<p>4.設定成省點模式</p>
-<h1>Python更新</h1>
-<p>驗證影片<br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JPD6v553Fso" width="560"></iframe></p>
-<p>1.先下載python3.8.2版</p>
-<p>2.安裝時先創建資料p382夾並選擇該資料夾</p>
-<p>3.安裝時將pip選項取消勾選</p>
-<p>4.將資料取代就資料夾</p>
-<p>5.將啟動當內舊的路徑改成新的p382</p>
-<p>6.安裝pip工具及完成</p>
-<h1>直播討論紀錄</h1>
-<h2>W2工作分配</h2>
-<p><br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JXUKf0cfJcc" width="560"></iframe></p>
-<h2>W3小組討論工作方向</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/QTfPD5bpeKc" width="560"></iframe></p>
-<h2>W5討論</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ElNea4b1dX8" width="560"></iframe></p>
-<p>討論內容</p>
-<p>Webots toutorials 工作分配</p>
-<p>未來作業討論</p>
-<h2>W6 OBS操作說明</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/B6jt5OAf424" width="560"></iframe></p>
-<p><strong>開會內容</strong></p>
-<p>說明OBS安裝及使用</p>
-<p>說明Webots工作方向</p>
-<h2>W7線上課程操作說明</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/96y-KSUWDyE" width="560"></iframe></p>
-<p><strong>討論內容</strong></p>
-<p>說明線上課程操作流程</p>
-<h1>亂數分組</h1>
-<p><span>要使用到隨機亂數抽取的功能就要使用到random套件</span></p>
-<p><span>在已知的數字清單中亂數抽取一個數字</span></p>
-<p><span>import random</span></p>
-<p><span>x=random.choice([1,3,5,7,9])</span></p>
-<p><span>print(x)</span></p>
-<p><span>&gt;&gt;1</span></p>
-<p><span>在已知的數字清單中亂數抽取兩個數字當作樣本</span></p>
-<p><span>import random</span></p>
-<p><span>y=random.sample([1,3,5,7,9],2)</span></p>
-<p><span>print(y)</span></p>
-<p><span>&gt;&gt;[9,1]</span></p>
-<p><span>將一組清單內的數字順序隨機調換</span></p>
-<p><span>import random</span></p>
-<p><span>data=[1,3,5,7,9]</span></p>
-<p><span>z=random.shuffle(data)</span></p>
-<p><span>print(data)</span></p>
-<p><span>&gt;&gt;[3,7,1,5,9]</span></p>
-<p><span>隨機取得介於0~1之前的數字</span></p>
-<p><span>import random</span></p>
-<p><span>t=random.random()</span></p>
-<p><span>print(t)</span></p>
-<p><span>&gt;&gt;0.8883405366359395</span></p>
-<p><span>隨機取得介於指定數字間的非整數數字</span></p>
-<p><span>import random</span></p>
-<p><span>c=random.uniform(0.0,20.0)</span></p>
-<p><span>print(c)</span></p>
-<p><span>&gt;&gt;16.102</span></p>
-<p><span>常態分配亂數，random.normalvariate(平均值,標準差)</span></p>
-<p><span>import random</span></p>
-<p><span>v=random.normalvariate(100,10)</span></p>
-<p><span>print(v)</span></p>
-<p><span>&gt;&gt;114.04193052665073</span></p>
-<h1>Webots翻譯</h1>
-<h2>傳感器</h2>
-<p></p>
-<h3>相機傳感器</h3>
-<p>對於大多數應用程序而言，添加通用的Camera節點就足夠了。 通用相機是可自定義的（分辨率，視野，噪點等），默認情況下包括變焦和聚焦機制。 提供特殊效果，例如運動模糊，各種噪聲模型，鏡頭畸變和使用球形投影。除了添加通用的Camera節點外，Webot中還提供了一些預定義的Camera模型。</p>
-<p><strong>智能相機</strong></p>
-<p>如果將“識別”節點添加到相機，則相機不僅可以返回圖像，而且還可以返回相機圖像中檢測到的所有對象及其大小和位置。 因此，模擬像是Mobileye之類的智能相機非常容易。</p>
-<p><img alt="smart_camera.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/smart_camera.png"/></p>
-<p><strong>MultiSense S21</strong></p>
-<p>MultiSense S21是基於立體相機的距離傳感器。我們的傳感器模型包括多個Webots設備。內部的IntertialUnit設備用於獲取設備的側傾角，俯仰角和偏航角。 可以使用Webots相機獨立檢索立體相機的左右RGB圖像。 或者，可以在MultiSense S21設備的中央啟用RGB相機和RangeFinder設備。 存在這兩個“元”設備以模仿由真實設備生成的3D彩色點的雲。</p>
-<p>可以使用下表從MultiSenseS21.name字段計算用於從控制器檢索設備的內部設備名稱：</p>
-<p><img alt="" height="529" src="/images/1586269302004.jpg" width="398"/></p>
-<p><img alt="multisense_s21.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/multisense_s21.thumbnail.png"/></p>
-<p><img alt="" height="365" src="/images/1586269413764.jpg" width="477"/></p>
-<p>名稱字段定義MultiSenseS21名稱，並用於計算內部設備名稱（請參閱此表）。</p>
-<p>cameraWidth和cameraHeight字段指定所有內部渲染設備（即Cameras和RangeFinder）的分辨率。</p>
-<p>cameraFieldOfView字段指定所有內部渲染設備的水平視場。</p>
-<p>cameraNoise字段指定所有內部渲染設備的噪聲（請參閱Camera.noise）。</p>
-<p>rangeFinderNoise字段指定內部元RangeFinder的噪聲（請參閱RangeFinder.noise）。</p>
-<p>rangeFinderMaxRange字段指定內部元RangeFinder的最大範圍（請參閱RangeFinder.maxRange）。</p>
-<p>leftCamera，rightCamera，metaCamera和metaRangeFinder字段允許啟用相應的內部渲染設備。</p>
-<p>enablePhysics字段指定傳感器是否應該受到物理影響（質量= 1.5 [kg]）。</p>
-<p></p>
-<h3>距離傳感器</h3>
-<p>對於大多數應用程序而言，添加通用的DistanceSensor節點就足夠了，因為它們是可自定義的（分辨率，lookupTable，光圈等）。此外，Webot中提供了一些預定義的商業化模型，例如某些紅外傳感器。</p>
-<p><strong>Sharp GP2D120</strong></p>
-<p><img alt="sharp_GP2D120.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2D120.png"/></p>
-<p>Sharp GP2D120是一款具有集成信號處理和模擬電壓輸出的測距傳感器。 該設備輸出與檢測距離相對應的電壓。該型號具有以下規格：</p>
-<p>有效範圍：<span>4 to 30 [cm]</span></p>
-<p>輸出類型：類比</p>
-<p>響應時間：39 [ms]</p>
-<p>啟動延遲：44 [ms]</p>
-<p>平均消耗：33 [mA]</p>
-<p>原型SharpGP2D120 {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2D120”<br/>   SFString模型“ GP2D120”</p>
-<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。</p>
-<p>wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
-<ul>
-<li>Convert meters to voltage:<span> </span><code>y(x) = 0.5131*x^(-0.5735)-0.6143</code></li>
-<li>Convert voltage to meters:<span> </span><code>y(x) = 0.1594*x^(-0.8533)-0.02916</code></li>
-</ul>
-<p><strong>Sharp GP2Y0A02YK0F</strong></p>
-<p><strong><img alt="sharp_GP2Y0A02YK0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A02YK0F.png"/></strong></p>
-<p>Sharp GP2Y0A02YK0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
-<p>該型號具有以下規格：</p>
-<p>有效範圍：20至150 [cm]</p>
-<p>輸出類型：類比</p>
-<p>響應時間：33 [ms]</p>
-<p>啟動延遲：50 [ms]</p>
-<p>平均消耗：33 [mA]</p>
-<p>原型SharpGP2Y0A02YK0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A02YK0F”</p>
-<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
-<ul>
-<li>Convert meters to voltage:<span> </span><code>y(x) = 1.784*x^(-0.4215)-1.11</code></li>
-<li>Convert voltage to meters:<span> </span><code>y(x) = 0.7611*x^(-0.9313)-0.1252</code></li>
-</ul>
-<p><strong>Sharp GP2Y0A41SK0F</strong></p>
-<p><strong><img alt="sharp_GP2Y0A41SK0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A41SK0F.png"/></strong></p>
-<p>Sharp GP2Y0A41SK0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
-<p>該型號具有以下規格：</p>
-<p>有效範圍：4到30 [cm]<br/>輸出類型：類比<br/>響應時間：16.5 [ms]<br/>啟動延遲：26 [ms]<br/>平均消耗：12 [mA]</p>
-<p><span>原型SharpGP2Y0A41SK0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A41SK0F”<br/></span></p>
-<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
-<ul>
-<li>Convert meters to voltage:<span> </span><code>y(x) = 0.5131*x^(-0.5735)-0.6143</code></li>
-<li>Convert voltage to meters:<span> </span><code>y(x) = 0.1594*x^(-0.8533)-0.02916</code><code></code></li>
-</ul>
-<p><strong>Sharp GP2Y0A710K0F</strong></p>
-<p><strong><img alt="sharp_GP2Y0A710K0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A710K0F.thumbnail.png"/></strong></p>
-<p>Sharp GP2Y0A710K0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
-<p>該型號具有以下規格：</p>
-<p>有效範圍：100至550 [cm]<br/>輸出類型：類比<br/>響應時間：21 [ms]<br/>啟動延遲：26 [ms]<br/>平均消耗：30 [mA]</p>
-<p>原型SharpGP2Y0A710K0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A710K0F”</p>
-<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
-<ul>
-<li>Convert meters to voltage:<span> </span><code>y(x) = 1.962*x^(-0.5214)+0.4926</code></li>
-<li>Convert voltage to meters:<span> </span><code>y(x) = 20.24*x^(-4.76)+0.6632</code></li>
-</ul>
-<h1>TOPIC 0</h1>
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cd2020 40723123</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cd2020 40723123</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li><a href='OBS串流使用方法及問題.html'>OBS串流使用方法及問題</a><li><a href='Python更新.html'>Python更新</a><li class='has-children'><a href='直播討論紀錄.html'>直播討論紀錄</a><ul class='dropdown'><li><a href='W2工作分配.html'>W2工作分配</a><li><a href='W3小組討論工作方向.html'>W3小組討論工作方向</a><li><a href='W5討論.html'>W5討論</a><li><a href='W6 OBS操作說明.html'>W6 OBS操作說明</a><li><a href='W7線上課程操作說明.html'>W7線上課程操作說明</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li class='has-children'><a href='Webots翻譯.html'>Webots翻譯</a><ul class='dropdown'><li class='has-children'><a href='傳感器.html'>傳感器</a><ul class='dropdown'><li><a href='相機傳感器.html'>相機傳感器</a><li><a href='距離傳感器.html'>距離傳感器</a></li></li></ul></ul><li><a href='TOPIC 0.html'>TOPIC 0</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">距離傳感器 << <a href='距離傳感器.html'>Previous</a> <br /><h1>TOPIC 0</h1>
 <p>今天，數位產品比以往任何時候都更加複雜。創建它們需要多個團隊<br/>成員，每個成員都有自己的一套技能和專業知識。例如，在Savvy，我們的客戶<br/>與以下人員緊密合作：產品經理，UX設計人員，視覺設計師，開發人員，內容<br/>戰略家和成長專家。<br/>我們使用設計協作來處理這種複雜性。正確完成，設計協作可助力<br/>每個專家都有共同的心態，流程和工具，共同建立更好的<br/>產品更快。<br/>我們編寫了此資源，以幫助其他應用程序創建者採用協作文化和流程。<br/>繼續學習為什麼設計協同對於創造吸引人的產品很重要，以及<br/>經驗。我們還將深入探討設計協作心態和文化，工具的要素<br/>進行有效的設計協作，以及實際工作中的設計協作示例。</p>
 <p><strong><span>什麼是“設計”協同？</span></strong></p>
 <p>在進入之前，我們需要在同一頁上了解什麼是設計協同……<br/>簡單來說，設計協同就是在設計優先的環境中進行協同。<br/>由於設計的本質，特別是我們在Savvy所做的設計，設計協同趨向於超越人們通常認為的協作。<br/>通常將協作定義為兩個或兩個以上的人共同完成一項任務<br/>為了實現共同的目標，設計協作涉及更多。<br/>設計協同包括更多具有不同技能，艱鉅挑戰和更大規模的人員,具有深遠影響的目標。<br/>您可能將協同視為兩個人掛在一塊藝術品上。它只需要溝通，團隊合作和四隻手。設計協同是指一組策展人.精心設計訪問者的體驗。他們選擇藝術品，選擇在何處以及如何懸掛藝術品，<br/>它所居住的房間（以及房間的照明，家具），甚至前面的房間和建築物<br/>整個。為什麼設計協作很重要<br/>您可以在沒有協同的情況下設計產品，但是需要一個協同設計過程才能完成<br/>不錯的產品。這就是設計協作如此重要的原因。<br/>我們不僅為客戶構建應用程序。精巧構建複雜且多平台的體驗<br/>內部系統，在某些情況下還包括整個品牌和業務。為此，我們利用專業知識<br/>跨多個核心學科：戰略，設計，開發和增長。每個項目都涉及<br/>許多人都有各自的技能和專長。<br/>設計協作將這些思想融合在一起，將他們各自的專業知識結合在一起<br/>創建解決方案，以解決共同目標的所有方面。而不是一個人遇到問題<br/>角度來看，設計協作將這個問題擺在所有專家面前，迫使他們考慮新<br/>觀點和可能性。</p>
@@ -204,4 +198,46 @@
 <p><strong><span>第三階段：循環和反饋</span></strong><br/>當我們的視覺設計師沿多個不同方向工作時，他選擇了UX設計師<br/>聊聊他在Figma中的進度和設計。通過討論工作，他們激發了更多<br/>想法和迭代，同時確保它們符合客戶期望。還有更多<br/>他手下有很多可靠的選擇，他再次與iOS開發人員會面，以確保一切都在<br/>從技術角度出發。</p>
 <p><strong><span>第四階段：客戶的反饋和發展</span></strong><br/>當我們找到更多，更最終的體驗版本時，視覺設計師走了<br/>通過他們與客戶一起使用Figma。 Press Play產品經理和UX設計師<br/>還提供了反饋和指導。<br/>一旦他們都了解了引起顧客興趣的東西，視覺設計師便開始最大限度地發揮作用。<br/>視覺效果並使它們為開發做好準備。他繼續與iOS開發人員合作，<br/>在技術層面上充分利用該概念。<br/>最終結果<br/>Press Play的實時繪圖動畫是工作中設計協作的一個範例。<br/>一些跨學科專家一起解決更大的設計和開發挑戰<br/>意思是。沒有設計協作，我們將找不到理想的交集<br/>用戶體驗，視覺和技術。<br/>當客戶在他的應用程序中看到動畫生動時，他稱其為“開創性的”。<br/>而且，這種Press Play體驗的研究，合作和創造對我們有幫助<br/>發現產品用戶旅程中的空白。最初，現場繪畫的目的是為了娛樂<br/>向用戶顯示結果的方式。在設計過程中，我們意識到，如果用戶不觀看實時繪圖，他們就會迷失方向，無法體驗終結該圖紙的用戶旅程。<br/>基於這一發現，我們決定在其他兩個地方也改進該應用程序。我們添加了一個<br/>獲勝者範圍的結果/實時繪圖元素，以及用戶的輸贏歷史記錄部分<br/>應用程序的細節部分。最後，需要用戶體驗,來設計協同使我們得以實現這一些未實現的目標。</p>
 <p><strong>結論說明</strong></p>
-<p>設計協作需要解決建造中伴隨的複雜，關鍵問題<br/>很棒的產品和經驗。 通過利用多個團隊成員的專業知識<br/>跨學科的設計協作可確保團隊從各個角度應對挑戰<br/>並尋求更好的解決方案。 借助正確的思維方式，工具和流程，進行設計協作<br/>使團隊能夠通過創造性思維和迭代來更深入。<br/>我們希望本指南為您提供良好的基礎，以便您可以構建自己的有效設計<br/>協作過程。 您可以在Savvy博客上了解有關設計和產品策略的更多信息，<br/>並隨時在Savvy Apps網站上與我們聯繫以尋求幫助。</p>
+<p>設計協作需要解決建造中伴隨的複雜，關鍵問題<br/>很棒的產品和經驗。 通過利用多個團隊成員的專業知識<br/>跨學科的設計協作可確保團隊從各個角度應對挑戰<br/>並尋求更好的解決方案。 借助正確的思維方式，工具和流程，進行設計協作<br/>使團隊能夠通過創造性思維和迭代來更深入。<br/>我們希望本指南為您提供良好的基礎，以便您可以構建自己的有效設計<br/>協作過程。 您可以在Savvy博客上了解有關設計和產品策略的更多信息，<br/>並隨時在Savvy Apps網站上與我們聯繫以尋求幫助。</p><br />距離傳感器 << <a href='距離傳感器.html'>Previous</a> </div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
