@@ -9,7 +9,8 @@
 <p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
 <p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>OBS串流使用方法及問題</h1>
+<h1>Assignment 1</h1>
+<h2>OBS串流使用方法及問題</h2>
 <p></p>
 <p><a href="https://github.com/mdecourse/cmsimde"></a><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BlCLr1_Rto0" width="560"></iframe></p>
 <p><strong>使用方法:</strong></p>
@@ -23,7 +24,7 @@
 <p>2.選擇圖形設定</p>
 <p>3.瀏覽並找到OBS主程式</p>
 <p>4.設定成省點模式</p>
-<h1>Python更新</h1>
+<h2>Python更新</h2>
 <p>驗證影片<br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JPD6v553Fso" width="560"></iframe></p>
 <p>1.先下載python3.8.2版</p>
 <p>2.安裝時先創建資料p382夾並選擇該資料夾</p>
@@ -31,6 +32,39 @@
 <p>4.將資料取代就資料夾</p>
 <p>5.將啟動當內舊的路徑改成新的p382</p>
 <p>6.安裝pip工具及完成</p>
+<h2>亂數分組</h2>
+<p><span>要使用到隨機亂數抽取的功能就要使用到random套件</span></p>
+<p><span>在已知的數字清單中亂數抽取一個數字</span></p>
+<p><span>import random</span></p>
+<p><span>x=random.choice([1,3,5,7,9])</span></p>
+<p><span>print(x)</span></p>
+<p><span>&gt;&gt;1</span></p>
+<p><span>在已知的數字清單中亂數抽取兩個數字當作樣本</span></p>
+<p><span>import random</span></p>
+<p><span>y=random.sample([1,3,5,7,9],2)</span></p>
+<p><span>print(y)</span></p>
+<p><span>&gt;&gt;[9,1]</span></p>
+<p><span>將一組清單內的數字順序隨機調換</span></p>
+<p><span>import random</span></p>
+<p><span>data=[1,3,5,7,9]</span></p>
+<p><span>z=random.shuffle(data)</span></p>
+<p><span>print(data)</span></p>
+<p><span>&gt;&gt;[3,7,1,5,9]</span></p>
+<p><span>隨機取得介於0~1之前的數字</span></p>
+<p><span>import random</span></p>
+<p><span>t=random.random()</span></p>
+<p><span>print(t)</span></p>
+<p><span>&gt;&gt;0.8883405366359395</span></p>
+<p><span>隨機取得介於指定數字間的非整數數字</span></p>
+<p><span>import random</span></p>
+<p><span>c=random.uniform(0.0,20.0)</span></p>
+<p><span>print(c)</span></p>
+<p><span>&gt;&gt;16.102</span></p>
+<p><span>常態分配亂數，random.normalvariate(平均值,標準差)</span></p>
+<p><span>import random</span></p>
+<p><span>v=random.normalvariate(100,10)</span></p>
+<p><span>print(v)</span></p>
+<p><span>&gt;&gt;114.04193052665073</span></p>
 <h1>直播討論紀錄</h1>
 <h2>W2工作分配</h2>
 <p><br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JXUKf0cfJcc" width="560"></iframe></p>
@@ -52,7 +86,8 @@
 <p><strong>討論內容</strong></p>
 <p>說明線上課程操作流程</p>
 <p>分配四輪車零件繪製</p>
-<p>了解Remote API</p><h2>W8</h2>
+<p>了解Remote API</p>
+<h2>W8</h2>
 <p><audio class="audio-for-speech"></audio></p>
 <div class="translate-tooltip-mtz hidden">
 <div class="header">
@@ -93,45 +128,25 @@
 </div>
 </div>
 <p><span class="translate-button-mtz hidden"></span></p>
+<p><audio class="audio-for-speech"></audio></p>
+<div class="translate-tooltip-mtz hidden">
+<div class="header">
+<div class="header-controls"><span class="sound-translate"></span> <span class="settings"></span></div>
+<div class="translate-icons"><img class="from"/> <img class="arrow" src="chrome-extension://gafjimepaiecpbmbmgaefokbekhoecaj/images/right-arrow.png"/> <img class="to"/></div>
+</div>
+<div class="translated-text">
+<div class="words"></div>
+<div class="sentences"></div>
+</div>
+</div>
+<p><span class="translate-button-mtz hidden"></span></p>
 <h2>W10 工作進度討論與Leo問題</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HauW6F-ez7w" width="560"></iframe></p>
+<h1>Assignment 2</h1>
+<h2>Webots翻譯</h2>
+<h3>傳感器</h3>
 <p></p>
-<p></p><h1>亂數分組</h1>
-<p><span>要使用到隨機亂數抽取的功能就要使用到random套件</span></p>
-<p><span>在已知的數字清單中亂數抽取一個數字</span></p>
-<p><span>import random</span></p>
-<p><span>x=random.choice([1,3,5,7,9])</span></p>
-<p><span>print(x)</span></p>
-<p><span>&gt;&gt;1</span></p>
-<p><span>在已知的數字清單中亂數抽取兩個數字當作樣本</span></p>
-<p><span>import random</span></p>
-<p><span>y=random.sample([1,3,5,7,9],2)</span></p>
-<p><span>print(y)</span></p>
-<p><span>&gt;&gt;[9,1]</span></p>
-<p><span>將一組清單內的數字順序隨機調換</span></p>
-<p><span>import random</span></p>
-<p><span>data=[1,3,5,7,9]</span></p>
-<p><span>z=random.shuffle(data)</span></p>
-<p><span>print(data)</span></p>
-<p><span>&gt;&gt;[3,7,1,5,9]</span></p>
-<p><span>隨機取得介於0~1之前的數字</span></p>
-<p><span>import random</span></p>
-<p><span>t=random.random()</span></p>
-<p><span>print(t)</span></p>
-<p><span>&gt;&gt;0.8883405366359395</span></p>
-<p><span>隨機取得介於指定數字間的非整數數字</span></p>
-<p><span>import random</span></p>
-<p><span>c=random.uniform(0.0,20.0)</span></p>
-<p><span>print(c)</span></p>
-<p><span>&gt;&gt;16.102</span></p>
-<p><span>常態分配亂數，random.normalvariate(平均值,標準差)</span></p>
-<p><span>import random</span></p>
-<p><span>v=random.normalvariate(100,10)</span></p>
-<p><span>print(v)</span></p>
-<p><span>&gt;&gt;114.04193052665073</span></p>
-<h1>Webots翻譯</h1>
-<h2>傳感器</h2>
-<p></p>
-<h3>相機傳感器</h3>
+<h4>相機傳感器</h4>
 <p>對於大多數應用程序而言，添加通用的Camera節點就足夠了。 通用相機是可自定義的（分辨率，視野，噪點等），默認情況下包括變焦和聚焦機制。 提供特殊效果，例如運動模糊，各種噪聲模型，鏡頭畸變和使用球形投影。除了添加通用的Camera節點外，Webot中還提供了一些預定義的Camera模型。</p>
 <p><strong>智能相機</strong></p>
 <p>如果將“識別”節點添加到相機，則相機不僅可以返回圖像，而且還可以返回相機圖像中檢測到的所有對象及其大小和位置。 因此，模擬像是Mobileye之類的智能相機非常容易。</p>
@@ -151,7 +166,7 @@
 <p>leftCamera，rightCamera，metaCamera和metaRangeFinder字段允許啟用相應的內部渲染設備。</p>
 <p>enablePhysics字段指定傳感器是否應該受到物理影響（質量= 1.5 [kg]）。</p>
 <p></p>
-<h3>距離傳感器</h3>
+<h4>距離傳感器</h4>
 <p>對於大多數應用程序而言，添加通用的DistanceSensor節點就足夠了，因為它們是可自定義的（分辨率，lookupTable，光圈等）。此外，Webot中提供了一些預定義的商業化模型，例如某些紅外傳感器。</p>
 <p><strong>Sharp GP2D120</strong></p>
 <p><img alt="sharp_GP2D120.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2D120.png"/></p>
@@ -205,7 +220,7 @@
 <li>Convert meters to voltage:<span> </span><code>y(x) = 1.962*x^(-0.5214)+0.4926</code></li>
 <li>Convert voltage to meters:<span> </span><code>y(x) = 20.24*x^(-4.76)+0.6632</code></li>
 </ul>
-<h1>TOPIC 0</h1>
+<h2>TOPIC 0</h2>
 <p><span style="color: #000000;">今天，數位產品比以往任何時候都更加複雜。創建它們需要多個團隊</span><br/><span style="color: #000000;">成員，每個成員都有自己的一套技能和專業知識。例如，在Savvy，我們的客戶</span><br/><span style="color: #000000;">與以下人員緊密合作：產品經理，UX設計人員，視覺設計師，開發人員，內容</span><br/><span style="color: #000000;">戰略家和成長專家。</span><br/><span style="color: #000000;">我們使用設計協作來處理這種複雜性。正確完成，設計協作可助力</span><br/><span style="color: #000000;">每個專家都有共同的心態，流程和工具，共同建立更好的</span><br/><span style="color: #000000;">產品更快。</span><br/><span style="color: #000000;">我們編寫了此資源，以幫助其他應用程序創建者採用協作文化和流程。</span><br/><span style="color: #000000;">繼續學習為什麼設計協同對於創造吸引人的產品很重要，以及</span><br/><span style="color: #000000;">經驗。我們還將深入探討設計協作心態和文化，工具的要素</span><br/><span style="color: #000000;">進行有效的設計協作，以及實際工作中的設計協作示例。</span></p>
 <p><span style="color: #000000;"><strong>什麼是“設計”協同？</strong></span></p>
 <p><span style="color: #000000;">在進入之前，我們需要在同一頁上了解什麼是設計協同……</span><br/><span style="color: #000000;">簡單來說，設計協同就是在設計優先的環境中進行協同。</span><br/><span style="color: #000000;">由於設計的本質，特別是我們在Savvy所做的設計，設計協同趨向於超越人們通常認為的協作。</span><br/><span style="color: #000000;">通常將協作定義為兩個或兩個以上的人共同完成一項任務</span><br/><span style="color: #000000;">為了實現共同的目標，設計協作涉及更多。</span><br/><span style="color: #000000;">設計協同包括更多具有不同技能，艱鉅挑戰和更大規模的人員,具有深遠影響的目標。</span><br/><span style="color: #000000;">您可能將協同視為兩個人掛在一塊藝術品上。它只需要溝通，團隊合作和四隻手。設計協同是指一組策展人.精心設計訪問者的體驗。他們選擇藝術品，選擇在何處以及如何懸掛藝術品，</span><br/><span style="color: #000000;">它所居住的房間（以及房間的照明，家具），甚至前面的房間和建築物</span><br/><span style="color: #000000;">整個。為什麼設計協作很重要</span><br/><span style="color: #000000;">您可以在沒有協同的情況下設計產品，但是需要一個協同設計過程才能完成</span><br/><span style="color: #000000;">不錯的產品。這就是設計協作如此重要的原因。</span><br/><span style="color: #000000;">我們不僅為客戶構建應用程序。精巧構建複雜且多平台的體驗</span><br/><span style="color: #000000;">內部系統，在某些情況下還包括整個品牌和業務。為此，我們利用專業知識</span><br/><span style="color: #000000;">跨多個核心學科：戰略，設計，開發和增長。每個項目都涉及</span><br/><span style="color: #000000;">許多人都有各自的技能和專長。</span><br/><span style="color: #000000;">設計協作將這些思想融合在一起，將他們各自的專業知識結合在一起</span><br/><span style="color: #000000;">創建解決方案，以解決共同目標的所有方面。而不是一個人遇到問題</span><br/><span style="color: #000000;">角度來看，設計協作將這個問題擺在所有專家面前，迫使他們考慮新</span><br/><span style="color: #000000;">觀點和可能性。</span></p>

@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='OBS串流使用方法及問題.html'>OBS串流使用方法及問題</a><li><a href='Python更新.html'>Python更新</a><li class='has-children'><a href='直播討論紀錄.html'>直播討論紀錄</a><ul class='dropdown'><li><a href='W2工作分配.html'>W2工作分配</a><li><a href='W3小組討論工作方向.html'>W3小組討論工作方向</a><li><a href='W5討論.html'>W5討論</a><li><a href='W6 OBS操作說明.html'>W6 OBS操作說明</a><li><a href='W7線上課程操作說明與討論.html'>W7線上課程操作說明與討論</a><li><a href='W8.html'>W8</a><li><a href='W9.html'>W9</a><li><a href='W10 工作進度討論與Leo問題.html'>W10 工作進度討論與Leo問題</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li class='has-children'><a href='Webots翻譯.html'>Webots翻譯</a><ul class='dropdown'><li class='has-children'><a href='傳感器.html'>傳感器</a><ul class='dropdown'><li><a href='相機傳感器.html'>相機傳感器</a><li><a href='距離傳感器.html'>距離傳感器</a></li></li></ul></ul><li><a href='TOPIC 0.html'>TOPIC 0</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Assignment 1.html'>Assignment 1</a><ul class='dropdown'><li><a href='OBS串流使用方法及問題.html'>OBS串流使用方法及問題</a><li><a href='Python更新.html'>Python更新</a><li><a href='亂數分組.html'>亂數分組</a></li></ul><li class='has-children'><a href='直播討論紀錄.html'>直播討論紀錄</a><ul class='dropdown'><li><a href='W2工作分配.html'>W2工作分配</a><li><a href='W3小組討論工作方向.html'>W3小組討論工作方向</a><li><a href='W5討論.html'>W5討論</a><li><a href='W6 OBS操作說明.html'>W6 OBS操作說明</a><li><a href='W7線上課程操作說明與討論.html'>W7線上課程操作說明與討論</a><li><a href='W8.html'>W8</a><li><a href='W9.html'>W9</a><li><a href='W10 工作進度討論與Leo問題.html'>W10 工作進度討論與Leo問題</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li class='has-children'><a href='Webots翻譯.html'>Webots翻譯</a><ul class='dropdown'><li><a href='傳感器.html'>傳感器</a></li></ul><li><a href='TOPIC 0.html'>TOPIC 0</a></li>
                       </ul>
                 </nav>
               </div>
@@ -154,9 +154,83 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Webots翻譯 << <a href='Webots翻譯.html'>Previous</a> <a href='相機傳感器.html'>Next</a> >> 相機傳感器<br /><h1>傳感器</h1>
+    <div id="tipue_search_content">Webots翻譯 << <a href='Webots翻譯.html'>Previous</a> <a href='TOPIC 0.html'>Next</a> >> TOPIC 0<br /><h1>傳感器</h1>
 <p></p>
-<br />Webots翻譯 << <a href='Webots翻譯.html'>Previous</a> <a href='相機傳感器.html'>Next</a> >> 相機傳感器</div>
+<h4>相機傳感器</h4>
+<p>對於大多數應用程序而言，添加通用的Camera節點就足夠了。 通用相機是可自定義的（分辨率，視野，噪點等），默認情況下包括變焦和聚焦機制。 提供特殊效果，例如運動模糊，各種噪聲模型，鏡頭畸變和使用球形投影。除了添加通用的Camera節點外，Webot中還提供了一些預定義的Camera模型。</p>
+<p><strong>智能相機</strong></p>
+<p>如果將“識別”節點添加到相機，則相機不僅可以返回圖像，而且還可以返回相機圖像中檢測到的所有對象及其大小和位置。 因此，模擬像是Mobileye之類的智能相機非常容易。</p>
+<p><img alt="smart_camera.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/smart_camera.png"/></p>
+<p><strong>MultiSense S21</strong></p>
+<p>MultiSense S21是基於立體相機的距離傳感器。我們的傳感器模型包括多個Webots設備。內部的IntertialUnit設備用於獲取設備的側傾角，俯仰角和偏航角。 可以使用Webots相機獨立檢索立體相機的左右RGB圖像。 或者，可以在MultiSense S21設備的中央啟用RGB相機和RangeFinder設備。 存在這兩個“元”設備以模仿由真實設備生成的3D彩色點的雲。</p>
+<p>可以使用下表從MultiSenseS21.name字段計算用於從控制器檢索設備的內部設備名稱：</p>
+<p><img alt="" height="529" src="./../images/1586269302004.jpg" width="398"/></p>
+<p><img alt="multisense_s21.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/multisense_s21.thumbnail.png"/></p>
+<p><img alt="" height="365" src="./../images/1586269413764.jpg" width="477"/></p>
+<p>名稱字段定義MultiSenseS21名稱，並用於計算內部設備名稱（請參閱此表）。</p>
+<p>cameraWidth和cameraHeight字段指定所有內部渲染設備（即Cameras和RangeFinder）的分辨率。</p>
+<p>cameraFieldOfView字段指定所有內部渲染設備的水平視場。</p>
+<p>cameraNoise字段指定所有內部渲染設備的噪聲（請參閱Camera.noise）。</p>
+<p>rangeFinderNoise字段指定內部元RangeFinder的噪聲（請參閱RangeFinder.noise）。</p>
+<p>rangeFinderMaxRange字段指定內部元RangeFinder的最大範圍（請參閱RangeFinder.maxRange）。</p>
+<p>leftCamera，rightCamera，metaCamera和metaRangeFinder字段允許啟用相應的內部渲染設備。</p>
+<p>enablePhysics字段指定傳感器是否應該受到物理影響（質量= 1.5 [kg]）。</p>
+<p></p>
+<h4>距離傳感器</h4>
+<p>對於大多數應用程序而言，添加通用的DistanceSensor節點就足夠了，因為它們是可自定義的（分辨率，lookupTable，光圈等）。此外，Webot中提供了一些預定義的商業化模型，例如某些紅外傳感器。</p>
+<p><strong>Sharp GP2D120</strong></p>
+<p><img alt="sharp_GP2D120.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2D120.png"/></p>
+<p>Sharp GP2D120是一款具有集成信號處理和模擬電壓輸出的測距傳感器。 該設備輸出與檢測距離相對應的電壓。該型號具有以下規格：</p>
+<p>有效範圍：<span mce-data-marked="1">4 to 30 [cm]</span></p>
+<p>輸出類型：類比</p>
+<p>響應時間：39 [ms]</p>
+<p>啟動延遲：44 [ms]</p>
+<p>平均消耗：33 [mA]</p>
+<p>原型SharpGP2D120 {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2D120”<br/>   SFString模型“ GP2D120”</p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。</p>
+<p>wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span mce-data-marked="1"> </span><code>y(x) = 0.5131*x^(-0.5735)-0.6143</code></li>
+<li>Convert voltage to meters:<span mce-data-marked="1"> </span><code>y(x) = 0.1594*x^(-0.8533)-0.02916</code></li>
+</ul>
+<p><strong>Sharp GP2Y0A02YK0F</strong></p>
+<p><strong><img alt="sharp_GP2Y0A02YK0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A02YK0F.png"/></strong></p>
+<p>Sharp GP2Y0A02YK0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
+<p>該型號具有以下規格：</p>
+<p>有效範圍：20至150 [cm]</p>
+<p>輸出類型：類比</p>
+<p>響應時間：33 [ms]</p>
+<p>啟動延遲：50 [ms]</p>
+<p>平均消耗：33 [mA]</p>
+<p>原型SharpGP2Y0A02YK0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A02YK0F”</p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span mce-data-marked="1"> </span><code>y(x) = 1.784*x^(-0.4215)-1.11</code></li>
+<li>Convert voltage to meters:<span mce-data-marked="1"> </span><code>y(x) = 0.7611*x^(-0.9313)-0.1252</code></li>
+</ul>
+<p><strong>Sharp GP2Y0A41SK0F</strong></p>
+<p><strong><img alt="sharp_GP2Y0A41SK0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A41SK0F.png"/></strong></p>
+<p>Sharp GP2Y0A41SK0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
+<p>該型號具有以下規格：</p>
+<p>有效範圍：4到30 [cm]<br/>輸出類型：類比<br/>響應時間：16.5 [ms]<br/>啟動延遲：26 [ms]<br/>平均消耗：12 [mA]</p>
+<p><span mce-data-marked="1">原型SharpGP2Y0A41SK0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A41SK0F”<br/></span></p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span mce-data-marked="1"> </span><code>y(x) = 0.5131*x^(-0.5735)-0.6143</code></li>
+<li>Convert voltage to meters:<span mce-data-marked="1"> </span><code>y(x) = 0.1594*x^(-0.8533)-0.02916</code><code></code></li>
+</ul>
+<p><strong>Sharp GP2Y0A710K0F</strong></p>
+<p><strong><img alt="sharp_GP2Y0A710K0F.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/sensors/sharp_GP2Y0A710K0F.thumbnail.png"/></strong></p>
+<p>Sharp GP2Y0A710K0F是一種測距傳感器單元，由PSD（位置敏感檢測器），IR-LED（紅外發光二極管）和信號處理電路的集成組合組成。 由於採用三角測量法，物體的反射率，環境溫度和工作持續時間的變化不容易影響距離檢測。 該設備輸出與檢測距離相對應的電壓。 因此，該傳感器也可以用作接近傳感器。</p>
+<p>該型號具有以下規格：</p>
+<p>有效範圍：100至550 [cm]<br/>輸出類型：類比<br/>響應時間：21 [ms]<br/>啟動延遲：26 [ms]<br/>平均消耗：30 [mA]</p>
+<p>原型SharpGP2Y0A710K0F {<br/>   SFVec3f轉換0 0 0<br/>   旋轉旋轉0 1 0 0<br/>   SFString名稱“夏普的紅外傳感器GP2Y0A710K0F”</p>
+<p>根據數據表中的特徵，DistanceSensor的lookupTable字段已經實現。wb_distance_sensor_get_value函數返回測量的電壓/強度。 要轉換這些值，請使用以下公式：</p>
+<ul>
+<li>Convert meters to voltage:<span mce-data-marked="1"> </span><code>y(x) = 1.962*x^(-0.5214)+0.4926</code></li>
+<li>Convert voltage to meters:<span mce-data-marked="1"> </span><code>y(x) = 20.24*x^(-4.76)+0.6632</code></li>
+</ul>
+<br />Webots翻譯 << <a href='Webots翻譯.html'>Previous</a> <a href='TOPIC 0.html'>Next</a> >> TOPIC 0</div>
         
     <!-- footer -->
       <div class="container">
