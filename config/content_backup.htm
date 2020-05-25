@@ -319,6 +319,18 @@
 </div>
 </div>
 <p><span class="translate-button-mtz hidden" style="top: 199px; left: 105.5px;"></span></p>
+<p><audio class="audio-for-speech"></audio></p>
+<div class="translate-tooltip-mtz hidden">
+<div class="header">
+<div class="header-controls"><span class="sound-translate"></span> <span class="settings"></span></div>
+<div class="translate-icons"><img class="from"/> <img class="arrow" src="chrome-extension://gafjimepaiecpbmbmgaefokbekhoecaj/images/right-arrow.png"/> <img class="to"/></div>
+</div>
+<div class="translated-text">
+<div class="words"></div>
+<div class="sentences"></div>
+</div>
+</div>
+<p><span class="translate-button-mtz hidden"></span></p>
 <h1>Gm用戶登入設置</h1>
 <p></p>
 <p>1.先進入<a href="https://console.developers.google.com/apis">Google APIs</a>網頁並建立專案(位置為gm.nfu.edt.tw)</p>
@@ -328,8 +340,13 @@
 <p>5.選擇內部然後建立</p>
 <p>6.輸入名稱然後儲存</p>
 <p>7.點選憑證並建立憑證選擇OAuth 用戶端ID選擇網際應用程式並儲存</p>
-<p>8.將用戶ID和用戶密碼複製</p>
+<p>8.將用戶ID和用戶密碼複製並儲存成txt檔</p>
 <p>9.URL輸入https://localhost:8443  已授權的URL輸入https://localhost:8443/login/google/並儲存</p>
+<p>10.開啟leo並開啟cd2020pj1.leo 到config.py下keyFile 的路徑修改成跟剛剛儲存的txt檔名相同</p>
+<p>11.到黑窗輸入pip install authomatic </p>
+<p>12.進入cd2020pj1中輸入python wsgi.py 開啟https://localhost:8443就完成了</p>
+<p></p>
+<p></p>
 <p></p>
 <p></p>
 <p></p>
