@@ -154,14 +154,82 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W6 OBS操作說明 << <a href='W6 OBS操作說明.html'>Previous</a> <a href='W8.html'>Next</a> >> W8<br /><h1>W7線上課程操作說明與討論</h1>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/96y-KSUWDyE" width="560"></iframe></p>
-<p><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/958HX03aAf8" width="560"></iframe></strong></p>
-<p><strong>討論內容</strong></p>
-<p>說明線上課程操作流程</p>
-<p>分配四輪車零件繪製</p>
-<p>了解Remote API</p>
-<br />W6 OBS操作說明 << <a href='W6 OBS操作說明.html'>Previous</a> <a href='W8.html'>Next</a> >> W8</div>
+    <div id="tipue_search_content">VirturalBox IPv4 設定 << <a href='VirturalBox IPv4 設定.html'>Previous</a> <br /><h1>VirturalBox IPv6 設定</h1>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/MM_flsjU4K8" width="560"></iframe></p>
+<p></p>
+<p>1.開啟電源鍵進入Bios 開啟虛擬化技術</p>
+<p>2.開啟VirturalBox 匯入虛擬主機cd2020pj1</p>
+<p>3.喜好設定&gt;新增網路NATNetwork&gt;勾選支援DHCP IPv6</p>
+<p>4.cd2020pj1網路設定Net Network</p>
+<p><span>5.開啟cd2020pj1主機點選Activties 點選黑窗請到 /etc/apt/apt.conf.d 目錄下檢查是否有proxy.conf檔案，若沒有，請用新增(直接用vi編輯器開啟proxy.conf就會自動新增)</span></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_434438">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">cd /etc/apt/apt.conf.d</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">sudo vi proxy.conf</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>proxy.conf的檔案內容</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_14181">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">Acquire::http::proxy "http://[2001:288:6004:17::填port號]:3128";</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>完成後按insert :wq 儲存<br/><span>新增完內容後要更新apt</span></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_138756">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt update</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>輸入sudo apt install net-tools</p>
+<p>6.輸入ifconfig 查詢fd</p>
+<p><img alt="" height="352" src="./../images/VirtualBox_FrixjmScTm.png" width="489"/></p>
+<p>7.輸入設定</p>
+<p><img alt="" height="465" src="./../images/VirtualBox_Jw8OHqsMSg.png" width="669"/></p>
+<p>8.輸入sudo vi oauth_gn.txt 修改檔案123 123 並儲存</p>
+<p>9.輸入cd tem/cd2020pj1 &gt; sudo vi wsgi.py 案E編輯改成10.0.2.4</p>
+<p>10.輸入python3 wsgi.py</p>
+<p></p><br />VirturalBox IPv4 設定 << <a href='VirturalBox IPv4 設定.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
